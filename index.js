@@ -2,11 +2,16 @@ require("dotenv").config();
 const { WakaTimeClient, RANGE } = require("wakatime-client");
 const { Octokit } = require("@octokit/rest");
 
+// const {
+//   GIST_ID: gistId,
+//   GH_TOKEN: githubToken,
+//   WAKATIME_API_KEY: wakatimeApiKey
+// } = process.env;
 const {
-  GIST_ID: gistId,
-  GH_TOKEN: githubToken,
-  WAKATIME_API_KEY: wakatimeApiKey
-} = process.env;
+  GIST_ID: gistId = "Gist-url-key",
+  GH_TOKEN: githubToken = "Github Token",
+  WAKATIME_API_KEY: wakatimeApiKey = "WakaTime-api-key"
+} = {};
 
 const wakatime = new WakaTimeClient(wakatimeApiKey);
 
