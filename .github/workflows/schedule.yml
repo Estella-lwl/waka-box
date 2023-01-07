@@ -6,14 +6,15 @@ on:
     branches: 
       - master
   # Manual triggers with workflow_dispatch
-  workflow_dispatch:
+  #workflow_dispatch:
 jobs:
   update-gist:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - name: Update gist
-        uses: matchai/waka-box@master
+        #uses: matchai/waka-box@master
+        uses: Estella-lwl/waka-box@master
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: ff7331c8581072dfa316b1e95e7656ca
